@@ -18,3 +18,7 @@
 (fact "Given a word if the begining of the word matches with a blacklisted word it should return XXXX"
   (def blacklist ["friend"])
   (censorship blacklist "you are friendly") => "you are XXXXXXXX")
+
+(fact "Given word that ends with blacklisted word, return word"
+  (def blacklist ["friendly"])
+  (censorship blacklist "you are unfriendly") => "you are unfriendly")
