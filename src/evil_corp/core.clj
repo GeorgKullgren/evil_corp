@@ -21,4 +21,15 @@
                        (map #(censor-word blacklist %)
                             (clojure.string/split string #"\s"))))
 
+(defn translate-word
+  [transtable word]
+  (def matched-pair (filterv (fn [p] (= word (get p 0))) transtable))
+  (if (= (nth matched-pair 0 "nothing matched") "nothing matched")
+    word
+    (get (get matched-pair 0) 1)))
  
+(defn translator
+  [transtable string]
+  (clojure.string/join " "
+                       (map #(translate-word transtable %)
+                            (clojure.string/split string #"\s"))))
