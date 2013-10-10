@@ -1,6 +1,6 @@
 # evil_corp
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure implementation based on a Kata by Gianfranco Alonghi
 
 ## Usage
 
