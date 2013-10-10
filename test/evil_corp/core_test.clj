@@ -31,11 +31,11 @@
   (def tranlation-table [["fun" "timewaste"]]) 
   (translator tranlation-table "fun evil") => "timewaste evil")
 
-;(fact "when word is in the translation table it should be translated"
-;  (def translation-table [
-;                          ["bad" "ungood"]
-;                          ["better" "gooder"]
-;                          ["objection" "thoughtcrime"]
-;                          ["agree" "crimestop"]
-;                          ])
-;  (translator translation-table "Objection is bad, a better thing to do, is to agree.") => "Thoughtcrime is ungood, a gooder thing to do, is to crimestop.")
+(fact "when word is in the translation table it should be translated"
+  (def translation-table [
+                          ["bad" "ungood"]
+                          ["better" "gooder"]
+                          ["objection" "thoughtcrime"]
+                          ["agree" "crimestop"]
+                          ])
+  (translator translation-table "Objection is bad, a better thing to do, is to agree.") => "Thoughtcrime is ungood, a gooder thing to do, is to crimestop.")
